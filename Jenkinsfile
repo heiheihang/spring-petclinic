@@ -4,9 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                withMaven {
                     sh 'mvn clean package'
-                }
 
             }
         }
@@ -16,10 +14,8 @@ pipeline {
                     withSonarQubeEnv('sonarqube-env') 
                 { 
         // If you have configured more than one global server connection, you can specify its name
-//      sh "${scannerHome}/bin/sonar-scanner"
-                    withMaven {     
+//      sh "${scannerHome}/bin/sonar-scanner"  
                         sh "mvn sonar:sonar"
-                    }
                 }
             }
         }
