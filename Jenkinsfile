@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {   
+        PATH = "/usr/bin/mvn/bin"
+    }
     stages {
         stage('Build') {
             steps {
