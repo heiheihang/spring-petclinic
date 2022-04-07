@@ -1,5 +1,5 @@
 - name: Git pull maven compile tomcat deploy
-  hosts: 192.168.56.20
+  hosts: servers
   become: yes
   tasks:
     - name: check out the repository on the host
