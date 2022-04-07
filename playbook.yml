@@ -3,7 +3,9 @@
   become: yes
   tasks:
     - name: check out the repository on the host
-      git: repo=https://github.com/heiheihang/spring-petclinic.git dest=/myproject/ accept_hostkey=yes
+      git:
+        repo=https://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@github.com/heiheihang/spring-petclinic.git 
+        dest=/myproject/ accept_hostkey=yes
 
     - name: package project
       command: ./myproject/mvnw package
