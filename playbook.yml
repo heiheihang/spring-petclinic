@@ -1,5 +1,5 @@
 - name: Git pull maven compile tomcat deploy
-  hosts: servers
+  hosts: all
   become: yes
   tasks:
     - name: check out the repository on the host

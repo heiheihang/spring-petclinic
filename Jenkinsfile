@@ -11,7 +11,7 @@ pipeline {
        stage('Ansible Deploy') {
 //    def scannerHome = tool 'SonarScanner 4.0';
             steps{
-                sh 'ansible-playbook children.hosts playbook.yml'
+                sh 'ansible-playbook playbook.yml'
             }
         }
     }
