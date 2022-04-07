@@ -6,7 +6,7 @@
       git: repo=https:https://github.com/heiheihang/spring-petclinic.git dest=/root/workspace/myproject/ accept_hostkey=yes
 
     - name: package project
-    command: ./root/workspace/myproject/mvnw package
+      command: ./root/workspace/myproject/mvnw package
 
     - name: run project
-    command: ./java -jar ./root/workspace/myproject/target/*.jar
+      command: ./java -jar ./root/workspace/myproject/target/*.jar
