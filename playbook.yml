@@ -8,7 +8,7 @@
         dest: /home/vagrant/myproject/ 
 
     - name: package project
-      command: cd home/vagrant/myproject && sudo mvn clean package -Dcheckstyle.skip
+      command: cd /home/vagrant/myproject && sudo mvn clean package -Dcheckstyle.skip
 
     - name: run project
       command: ./java -jar ./home/vagrant/myproject/target/*.jar
