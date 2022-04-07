@@ -10,8 +10,3 @@
     - name: package project
       command: sudo mvn -f /home/vagrant/myproject/pom.xml clean package -Dcheckstyle.skip
       
-    - name: list project
-      command: cd /home/vagrant/myproject/target/*.jar && ls
-
-    - name: run project
-      command: java -jar /home/vagrant/myproject/target/*.jar
