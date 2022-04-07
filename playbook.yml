@@ -1,0 +1,12 @@
+- name: Git pull maven compile tomcat deploy
+  hosts: 192.168.56.20
+  become: yes
+  tasks:
+    - name: check out the repository on the host
+      git: repo=https:https://github.com/heiheihang/spring-petclinic.git dest=/root/workspace/myproject/ accept_hostkey=yes
+
+    - name: package project
+    command: ./root/workspace/myproject/mvnw package
+
+    - name: run project
+    command: ./java -jar ./root/workspace/myproject/target/*.jar
