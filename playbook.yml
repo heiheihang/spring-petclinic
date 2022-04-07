@@ -11,4 +11,4 @@
       command: sudo mvn -f /home/vagrant/myproject/pom.xml clean package -Dcheckstyle.skip
 
     - name: run project
-      command: ./java -jar ./home/vagrant/myproject/target/*.jar
+      command: java -jar /home/vagrant/myproject/target/*.jar
